@@ -5,7 +5,7 @@
 * Chinese (Tranditional) Language Pack for Visual Studio Code
 * Chinese Lorem
 * Live Server
-* Prettier
+<!-- * Prettier -->
 
 ## 快速鍵
 
