@@ -33,8 +33,6 @@
 
 [Lorem Picsum](https://picsum.photos/)
 
-[PlaceHolder](https://placeholder.com/)
-
 ```
 https://via.placeholder.com/600x300/f00/fff/?text=hello
 
