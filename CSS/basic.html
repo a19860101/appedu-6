@@ -9,18 +9,23 @@
     <style>
         /* @import url('style.css'); */
         h1 {
-            color: red;
+            color: red!important;
         }
         .abc {
-            color: greenyellow;
+            color: greenyellow!important;
         }
         #xyz {
-            color: orange;
+            color: orange!important;
         }
         /* 
             標籤選取器 
             類別選取器class
-            id選取器
+            id選取器(只可使用一次)
+        */
+        /* 
+            CSS權重 specificity
+            影響範圍越少，權重越重
+            !important > 嵌入式 > id > class > tag
         */
     </style>
 </head>
@@ -29,7 +34,7 @@
     <p style="color: greenyellow;">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam temporibus accusantium ea facere veritatis magni soluta porro quo architecto iure, repudiandae provident harum enim dolor commodi beatae tempora sequi nam.
     </p> -->
-    <h1>title</h1>
+    <h1 class="abc" id="xyz" style="color:cornflowerblue">title</h1>
     <ul>
         <li>list</li>
         <li>list</li>
@@ -46,7 +51,7 @@
     <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ex magni commodi dolor id reprehenderit exercitationem ipsum libero! Reprehenderit dolor libero aliquam porro eligendi beatae veniam et accusantium distinctio neque.
     </p>
-    <p id="xyz">
+    <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ex magni commodi dolor id reprehenderit exercitationem ipsum libero! Reprehenderit dolor libero aliquam porro eligendi beatae veniam et accusantium distinctio neque.
     </p>
     <p>
