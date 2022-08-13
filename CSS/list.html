@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         li {
-            list-style: '\1F62D'
+            list-style: disc
             /* 
                 none
                 disc, circle, square
@@ -16,31 +16,51 @@
                 hebrew, armenian, georgian, lower-greek
             */
         }
+        li::marker {
+            color: #f00;
+        }
+
+        h2 {
+            counter-increment: h2;
+            display: list-item;
+            list-style-position: inside;
+        }
+
+        h2::marker {
+            content: '0' counter(h2) '.';
+            color: #f00;
+        }
     </style>
 </head>
 <body>
+    <div>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+        <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto blanditiis amet quisquam libero, expedita, unde veritatis fugit facere similique ipsa illum facilis reprehenderit incidunt! Ducimus illum molestiae sed itaque.
+        </p>
+    </div>
     <h1>&#128557;</h1>
     <ul>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
         <li>list</li>
         <li>list</li>
         <li>list</li>
