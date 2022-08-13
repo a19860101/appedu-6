@@ -8,7 +8,9 @@
     <style>
         body {
             background-color: rgb(255, 161, 161);
-            background-image: url('https://picsum.photos/id/123/1600/1400');
+            background-image: 
+                linear-gradient(red,transparent),
+                url('https://picsum.photos/id/123/1600/1400');
             background-repeat: no-repeat;
             /* 
                 repeat, no-repeat, repeat-x, repeat-y
@@ -21,6 +23,8 @@
 
             background-size: cover;
             /* contain, cover */
+
+            background-blend-mode: multiply;
             
         }
         h1 {
