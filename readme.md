@@ -38,10 +38,21 @@
 
 [Lorem Picsum](https://picsum.photos/)
 
-```
-https://via.placeholder.com/600x300/f00/fff/?text=hello
+```html
+<img src="https://picsum.photos/300/200">
+<!-- 隨機產生300x200圖片 -->
 
-https://via.placeholder.com/寬x高/背景色/文字色/?text=文字內容
+<img src="https://picsum.photos/300/">
+<!-- 隨機產生300x300圖片 -->
+
+<img src="https://picsum.photos/id/23/300/200">
+<!-- 產生id為23的300x200圖片 -->
+
+<img src="https://picsum.photos/id/34/200">
+<!-- 產生id為23的200x200圖片 -->
+
+<img src="https://picsum.photos/300/200?random=1">
+<!-- 隨機產生300x200圖片，設定不同的random值可以產生不同的圖片 -->
 ```
 
 [Color Hunt](https://colorhunt.co/)
