@@ -7,6 +7,11 @@
 * Live Server
 <!-- * Prettier -->
 
+## 調整Vscode
+* Editor: Mouse Wheel Zoom : 勾選
+* Emmet: Trigger Expansion On Tab : 勾選
+* Live Server › Settings: Custom Browser 選擇Chrome或Chrome Private
+
 ## 快速鍵
 
 | 名稱 | Windows快速鍵 | Mac快速鍵     |備註|
