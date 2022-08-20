@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 0;
+        }
+        .box {
+            width: 300px;
+            /* height: 300px; */
+            background-color: #fa0;
+
+            vertical-align: top;
+
+            display: inline-block;
+            font-size: 16px;
+
+        }
+        /* 
+            inline-block 之間會有4px不等的空隙
+            解法
+            1. 將父元素的font-size設定為0
+            2. 將自己的font-size還原
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quas iusto explicabo at unde labore repudiandae, illum accusantium nemo quo, fugiat corporis eligendi quia optio cumque officia aut? Explicabo, saepe!
+    </div>
+    <div class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam enim minima debitis! Officiis est temporibus atque cum voluptatem eveniet impedit accusamus omnis? Qui adipisci ad voluptatem velit laboriosam dolorum ducimus veniam aliquid enim autem commodi officia magni nulla officiis maiores, odit quidem consequatur rerum! Ab quos id quam vitae placeat.
+    </div>
+    <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, quam ratione ipsa ea laudantium minus est natus quis quasi? Perspiciatis.
+    </div>
+</body>
+</html>

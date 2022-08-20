@@ -94,11 +94,22 @@
                 行內的border,padding,margin只有左右有效
 
                 不要用行內排版
+
+                行內元素內不可包區塊元素(原始屬性)
+
             */
+        }
+        span {
+            display: block;
         }
     </style>
 </head>
 <body>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
     <span class="box">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque consequatur eligendi quibusdam facere veritatis eveniet assumenda, non, in laudantium magni provident incidunt laboriosam nulla nisi, aut ipsam corrupti autem modi!
     </span>
