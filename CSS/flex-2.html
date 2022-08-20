@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI';
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            /* 
+                flex-start, flex-end, center
+                space-between, space-around, space-evenly
+            */
+            align-items:center;
+            /* 
+                flex-start, flex-end, center
+                stretch, baseline
+            */
+
+            /* 
+                flex-direction為row時
+                justify-content表示水平對齊
+                align-items表示垂直對齊
+                
+                flex-direction為column時
+                justify-content表示垂直對齊
+                align-items表示水平對齊
+            */
+        }
+        .box {
+            width: 200px;
+            padding-inline: 15px;
+
+            background-color: #098;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus suscipit esse pariatur aperiam assumenda placeat atque reiciendis nesciunt tempore magni ipsa, hic doloremque aliquam mollitia facere deserunt natus. Explicabo, eius.
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>
