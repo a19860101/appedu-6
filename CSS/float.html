@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+
+            background-color: #098;
+
+            /* height: 400px; */
+            /* overflow: auto; */
+            display: flow-root;
+        }
+        .box {
+            width: 400px;
+            float: left;
+            padding-inline:15px;
+        }
+        /* 
+            父元素崩塌
+            當所有的子元素都是浮動時，父元素的高度會歸零
+        
+            解法
+            1. 設高度
+            2. overflow
+            3. flow-root
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga molestiae dolorum earum? Facere atque maxime corrupti eos recusandae veniam laborum molestias obcaecati sint? Consequuntur quaerat aspernatur corporis dolorum voluptates alias?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae adipisci praesentium accusamus ipsum consectetur. Quam aliquid repellendus tenetur iste soluta sequi eaque aut cupiditate ut labore laboriosam, nobis distinctio explicabo.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae adipisci praesentium accusamus ipsum consectetur. Quam aliquid repellendus tenetur iste soluta sequi eaque aut cupiditate ut labore laboriosam, nobis distinctio explicabo.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae adipisci praesentium accusamus ipsum consectetur. Quam aliquid repellendus tenetur iste soluta sequi eaque aut cupiditate ut labore laboriosam, nobis distinctio explicabo.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi harum consequuntur maiores, autem ipsa? Cumque optio delectus provident numquam enim eum reiciendis soluta aspernatur, ratione, tenetur facilis tempore eos?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi harum consequuntur maiores, autem ipsa? Cumque optio delectus provident numquam enim eum reiciendis soluta aspernatur, ratione, tenetur facilis tempore eos?
+        </div>
+    </div>
+</body>
+</html>
