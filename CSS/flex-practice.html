@@ -28,6 +28,7 @@
         }
         .box {
             width: calc(100% / 3);
+            padding: 15px;
         }
         .card-cover {
             /* width: 400px; */
@@ -68,7 +69,9 @@
             font-weight: normal;
         }
         .card-body {
-            padding: 13px;
+            padding-inline: 13px;
+            padding-block-start: 20px;
+            padding-block-end: 40px;
         }
         .card-body h4 {
             color: #00374d;
@@ -92,10 +95,73 @@
             left:-2px;
             z-index: -1;
         }
+        .card-body ul {
+            font-size: 14px;
+            color: #777;
+            list-style-position: inside;
+            line-height: 1.5rem;
+        }
+        .card-body li::marker {
+            content: '- ';
+            color: #aaa;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/89/1200/900" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="card-no">01</div>
+                        <h3>
+                            技術力
+                            <br>
+                            <small>
+                                Technical
+                            </small>
+                        </h3>
+                    </div>
+                    <h4>
+                        【為你的學習品質專業把關】
+                    </h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <div class="card-cover">
+                    <img src="https://picsum.photos/id/89/1200/900" alt="">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div class="card-no">01</div>
+                        <h3>
+                            技術力
+                            <br>
+                            <small>
+                                Technical
+                            </small>
+                        </h3>
+                    </div>
+                    <h4>
+                        【為你的學習品質專業把關】
+                    </h4>
+                    <ul>
+                        <li>課程內容規劃貼合產業需求及最新趨勢</li>
+                        <li>完成高水準作品集提升職場競爭力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="box">
             <div class="card">
                 <div class="card-cover">
