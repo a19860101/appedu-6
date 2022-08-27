@@ -29,64 +29,56 @@
         .box:nth-of-type(1) {
             background-color: #fa0;
             /* flex-grow: 1;  */
-            /* 600 *  1 / 6 = 100   300*/
+            /* 600 * 1 / 6 = 100  200+100=300*/
             /* flex-shrink: 1; */
-            /* 600 * 1 / 4 = 150  600 -150 450 */
+            /* 600 * 1 / 4 = 150  600-150=450 */
+            order:2;
         }
         .box:nth-of-type(2) {
             background-color: #0084ff;
             /* flex-grow: 3; */
-             /* 600 *  3 / 6 = 300 500*/
+             /* 600 * 3 / 6 = 300 200+300=500*/
              /* flex-shrink: 2; */
-             /* 600 * 2 / 4 = 300  600 -300  = 300 */
+             /* 600 * 2 / 4 = 300  600-300=300 */
+             order:3;
         }
         .box:nth-of-type(3) {
             background-color: #83ff5d;
             /* flex-grow: 2; */
-             /* 600 *  2/ 6 = 200  400*/
+             /* 600 *  2/ 6 = 200  200+200=400*/
              /* flex-shrink: 1; */
+            order: 1;
         }
+        .box:nth-of-type(4){
+            background-color: crimson;
+            order:4;
+        }
+        /* 
+            排序邏輯
+            1. 沒有設定排序(自然排序)會優先
+            2. 排序越小越前面
+        */
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
+            <h3>title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, temporibus tempore ad qui, atque eum labore animi laboriosam dolorem nostrum ab dignissimos doloribus, dolore modi perferendis esse quaerat. Dolore, totam!</p>
         </div>
         <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
+            <h3>title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, temporibus tempore ad qui, atque eum labore animi laboriosam dolorem nostrum ab dignissimos doloribus, dolore modi perferendis esse quaerat. Dolore, totam!</p>
         </div>
         <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
+            <h3>title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, temporibus tempore ad qui, atque eum labore animi laboriosam dolorem nostrum ab dignissimos doloribus, dolore modi perferendis esse quaerat. Dolore, totam!</p>
         </div>
         <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
+            <h3>title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, temporibus tempore ad qui, atque eum labore animi laboriosam dolorem nostrum ab dignissimos doloribus, dolore modi perferendis esse quaerat. Dolore, totam!</p>
         </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <br>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
-        <div class="box">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim quo facilis illo et cumque nihil velit blanditiis, reprehenderit sit accusantium ipsa magnam praesentium. Quam facilis culpa beatae distinctio sequi.
-        </div>
+        
     </div>
 </body>
 </html>
