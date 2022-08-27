@@ -14,6 +14,14 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
+        /* 
+            flex-direction為row時，flex-basis表寬度
+            flex-direction為column時，flex-basis表高度
+            
+            flex-grow 延展，預設為0，關閉延展
+            flex-shrink 壓縮，預設為1，開啟壓縮
+            ps.壓縮與換行會彼此衝突，開啟換行之後壓縮會失效。
+        */
         .box {
             /* width: calc(100% / 6); */
             /* flex-basis:calc(100% / 2); */
@@ -37,7 +45,7 @@
         .box:nth-of-type(2) {
             background-color: #0084ff;
             /* flex-grow: 3; */
-             /* 600 * 3 / 6 = 300 200+300=500*/
+             /* 600 * 3 / 6 = 300  200+300=500*/
              /* flex-shrink: 2; */
              /* 600 * 2 / 4 = 300  600-300=300 */
              order:3;
