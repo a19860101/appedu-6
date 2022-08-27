@@ -39,9 +39,37 @@
             75% {transform: translate(0,600px)rotate(270deg);}
             100% {transform: translate(0)rotate(360deg);}
         }
+        h1:hover {
+            animation:flash 600ms infinite ;
+        }
+        @keyframes flash {
+            0% {
+                opacity: 1;
+                letter-spacing: normal;
+            }
+            50% {
+                opacity: 0;
+                letter-spacing: 2px;
+            }
+            100% {
+                opacity: 1;
+                letter-spacing: normal;
+            }
+        }
+        a:focus {
+            animation: flash 600ms infinite;
+            /* background-color: #098; */
+        }
+        button:focus {
+            animation: flash 600ms infinite;
+            /* background-color: #098; */
+        }
     </style>
 </head>
 <body>
     <div class="box"></div>
+    <h1>title</h1>
+    <a href="#">click</a>
+    <button>click</button>
 </body>
 </html>
