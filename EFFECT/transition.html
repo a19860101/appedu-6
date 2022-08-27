@@ -23,9 +23,45 @@
             transform: rotate(45deg);
             width: 400px
         }
+        .container {
+            background-color: #ccc;
+            width: 600px;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: #098;
+            margin-block: 10px;
+            transition-duration: 2000ms;
+        }
+        .container:hover .item {
+            width: 600px;
+        }
+        .ease {
+            transition-timing-function: ease;
+        }
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+        .ease-in-out {
+            transition-timing-function: ease-in-out;
+        }
+        .linear {
+            transition-timing-function: cubic-bezier(.54,1.51,.95,-1.15);
+        }
     </style>
 </head>
 <body>
     <div class="box"></div>
+    <div class="container">
+        <div class="item ease"></div>
+        <div class="item ease-out"></div>
+        <div class="item ease-in"></div>
+        <div class="item ease-in-out"></div>
+        <div class="item linear"></div>
+    </div>
 </body>
 </html>
