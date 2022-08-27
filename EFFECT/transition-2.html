@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #938;
+            transition-property:  width,background-color ;
+            transition-duration: 600ms;
+            transition-delay: 0s,600ms;
+
+        }
+        /* 虛擬類別 */
+        .box:hover {
+            background-color: #098;
+            width: 400px;
+            transition-property:  background-color, width;
+            transition-duration: 600ms;
+            transition-delay: 0s,600ms;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>
