@@ -29,6 +29,8 @@ section {
     background-position: center;
     background-attachment: fixed;
     position: relative;
+
+    scroll-snap-align: start;
 }
 #model-s {
     background-image: url("https://picsum.photos/id/11/1600/1000");
@@ -41,6 +43,12 @@ section {
 }
 #model-y {
     background-image: url("https://picsum.photos/id/44/1600/1000");
+}
+#cybertruck {
+    background-image: url("https://picsum.photos/id/55/1600/1000");
+}
+#powerwall {
+    background-image: url("https://picsum.photos/id/66/1600/1000");
 }
 .container {
     display: flex;
@@ -91,7 +99,7 @@ section {
     bottom: 60px;
     animation: arrow 1s infinite;
     left: 50%;
-    color: red;
+    color: #222;
 }
 @keyframes arrow {
     0% {transform:translateX(-50%)translateY(0);}

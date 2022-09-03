@@ -6,9 +6,11 @@
 }
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 body {
     font-family: 'Roboto','Noto Sans TC';
+    scroll-snap-type: y mandatory;
 }
 img {
     width: 100%;
