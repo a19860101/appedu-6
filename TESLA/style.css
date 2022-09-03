@@ -63,3 +63,16 @@ section {
     background-color: red;
     color: #fff;
 }
+.arrow {
+    position: relative;
+    top: -50px;
+    color: red;
+    animation: arrow 1s infinite;
+}
+@keyframes arrow {
+    0% {transform: translateY(0);}
+    25% {transform: translateY(15px);}
+    50% {transform: translateY(0);}
+    75% {transform: translateY(3px);}
+    100% {transform: translateY(0);}
+}
