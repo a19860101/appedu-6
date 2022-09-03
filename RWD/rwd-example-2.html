@@ -17,6 +17,7 @@
             display: flex;
             flex-wrap: wrap;
         }
+        .col {flex: 1 0 0;}
         .col-1 {flex: 0 0 calc(100% / 12 * 1);}
         .col-2 {flex: 0 0 calc(100% / 12 * 2);}
         .col-3 {flex: 0 0 calc(100% / 12 * 3);}
@@ -36,6 +37,7 @@
             .container {
                 width: 600px;
             }
+            .col-md {flex:1 0 0;}
             .col-md-1 {flex: 0 0 calc(100% / 12 * 1);}
             .col-md-2 {flex: 0 0 calc(100% / 12 * 2);}
             .col-md-3 {flex: 0 0 calc(100% / 12 * 3);}
@@ -53,6 +55,7 @@
             .container {
                 width: 1200px;
             }
+            .col-lg{flex: 1 0 0;}
             .col-lg-1 {flex: 0 0 calc(100% / 12 * 1);}
             .col-lg-2 {flex: 0 0 calc(100% / 12 * 2);}
             .col-lg-3 {flex: 0 0 calc(100% / 12 * 3);}
@@ -69,6 +72,23 @@
     </style>
 </head>
 <body>
+    <div class="container row">
+        <div class="col-lg col-md-4 col-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptates laboriosam quas! Maxime nihil quibusdam blanditiis possimus repudiandae assumenda excepturi labore fugiat ratione nemo, id tempora quasi error corporis dolores?
+        </div>
+        <div class="col-lg col-md-4 col-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptates laboriosam quas! Maxime nihil quibusdam blanditiis possimus repudiandae assumenda excepturi labore fugiat ratione nemo, id tempora quasi error corporis dolores?
+        </div>
+        <div class="col-lg col-md-4 col-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptates laboriosam quas! Maxime nihil quibusdam blanditiis possimus repudiandae assumenda excepturi labore fugiat ratione nemo, id tempora quasi error corporis dolores?
+        </div>
+        <div class="col-lg col-md-6 col-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptates laboriosam quas! Maxime nihil quibusdam blanditiis possimus repudiandae assumenda excepturi labore fugiat ratione nemo, id tempora quasi error corporis dolores?
+        </div>
+        <div class="col-lg col-md-6 col-12">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptates laboriosam quas! Maxime nihil quibusdam blanditiis possimus repudiandae assumenda excepturi labore fugiat ratione nemo, id tempora quasi error corporis dolores?
+        </div>
+    </div>
     <div class="container row">
         <div class="col-lg-3 col-md-6 col-12">
             <h2>title</h2>
