@@ -15,7 +15,8 @@ nav a {
     transition: 600ms;
     border-radius: 5px;
 }
-nav a:hover {
+
+nav a:not(.nav-logo):hover {
     background-color: rgb(255 120 0 / .8);
 }
 section {
