@@ -1,0 +1,26 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    /* background-color: #aaa; */
+}
+section {
+    background-image: url('https://picsum.photos/id/11/1600/1000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.title {
+    margin-top: 150px;
+}
+.button-group {
+    margin-bottom: 150px;
+}
