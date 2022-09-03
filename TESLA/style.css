@@ -27,18 +27,19 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
 }
 #model-s {
     background-image: url("https://picsum.photos/id/11/1600/1000");
 }
 #model-3 {
-    background-image: url("https://picsum.photos/id/12/1600/1000");
+    background-image: url("https://picsum.photos/id/22/1600/1000");
 }
 #model-x {
-    background-image: url("https://picsum.photos/id/13/1600/1000");
+    background-image: url("https://picsum.photos/id/33/1600/1000");
 }
 #model-y {
-    background-image: url("https://picsum.photos/id/14/1600/1000");
+    background-image: url("https://picsum.photos/id/44/1600/1000");
 }
 .container {
     display: flex;
@@ -46,7 +47,6 @@ section {
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-    position: relative;
 }
 .title {
     margin-top: 150px;
