@@ -27,6 +27,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 #model-s {
@@ -98,4 +99,20 @@ section {
     50% {transform:translateX(-50%)translateY(0);}
     75% {transform:translateX(-50%)translateY(6px);}
     100% {transform:translateX(-50%)translateY(0);}
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding-block:10px;
+    background-color: #fff;
+    
+}
+footer a {
+    color: #999;
+    text-decoration: none;
+    margin-inline:10px;
 }
