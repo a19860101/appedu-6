@@ -5,6 +5,7 @@ nav {
     align-items: center;
     position: fixed;
     height: 60px;
+    z-index: 9999;
 }
 .nav-link , .nav-logo{
     color: #000;
@@ -23,10 +24,21 @@ nav {
 } */
 
 section {
-    background-image: url("https://picsum.photos/id/11/1600/1000");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+#model-s {
+    background-image: url("https://picsum.photos/id/11/1600/1000");
+}
+#model-3 {
+    background-image: url("https://picsum.photos/id/12/1600/1000");
+}
+#model-x {
+    background-image: url("https://picsum.photos/id/13/1600/1000");
+}
+#model-y {
+    background-image: url("https://picsum.photos/id/14/1600/1000");
 }
 .container {
     display: flex;
