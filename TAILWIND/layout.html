@@ -145,9 +145,9 @@
             </div>
         </div>
     </section>
-    <section class="py-36">
+    <section class="py-36 bg-sky-100">
         <div class="container mx-auto">
-            <div class="w-1/2 mx-auto">
+            <div class="w-2/3 lg:w-1/2 mx-auto">
                 <form action="" method="">
                     <div class="mb-4">
                         <label class="mb-2 inline-block" for="name">姓名</label>
@@ -180,13 +180,27 @@
                         </select>
                     </div>
                     <div class="mb-4">
-                        <label class="mb-2 inline-block">性別</label>
+                        <label class="mb-2 block">性別</label>
                         
                         <input type="radio" id="male" value="男" name="gender">
                         <label for="male">男</label>
                         
                         <input type="radio" id="female" value="女" name="gender">
                         <label for="female">女</label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2">從何得知</label>
+
+                        <input type="checkbox" id="news" name="knows" value="新聞報導">
+                        <label for="news">新聞報導</label>
+                        <input type="checkbox" id="sns" name="knows" value="社群媒體">
+                        <label for="sns">社群媒體</label>
+                        <input type="checkbox" id="podcast" name="knows" value="Podcast">
+                        <label for="podcast">Podcast</label>
+                    </div>
+                    <div class="mb-4">
+                        <label for="content" class="mb-2 inline-block" >內容</label>
+                        <textarea name="content" id="content" cols="30" rows="10" class="border border-gray-500 w-full p-2"></textarea>
                     </div>
                     <input type="submit" class="px-8 py-2 rounded bg-gray-300" value="送出">
                 </form>
