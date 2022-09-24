@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.active {
+            color: #ffe346;
+            background-color: #ccc;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">click</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium optio in vitae eligendi sunt neque modi corrupti quos dolor architecto nemo ducimus animi, expedita totam quibusdam tempore suscipit ex!
+    </p>
+    <script>
+        let btn = document.querySelector('.btn');
+
+        btn.onclick = function(){
+            console.log('按下去了');
+            // document.querySelector('p').style.color = 'red';
+            // document.querySelector('p').style.backgroundColor = '#aaa';
+            // document.querySelector('p').style.padding = '15px';
+            document.querySelector('p').classList.add('active');
+        }
+    </script>
+</body>
+</html>
