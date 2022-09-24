@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        p {
+            transition: 600ms;
+        }
         p.active {
             color: #ffe346;
             background-color: #ccc;
@@ -14,19 +17,30 @@
     </style>
 </head>
 <body>
-    <button class="btn">click</button>
+    <button class="btn-add">add</button>
+    <button class="btn-remove">remove</button>
+    <button class="btn-toggle">toggle</button>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium optio in vitae eligendi sunt neque modi corrupti quos dolor architecto nemo ducimus animi, expedita totam quibusdam tempore suscipit ex!
     </p>
     <script>
-        let btn = document.querySelector('.btn');
+        let btnAdd = document.querySelector('.btn-add');
+        let btnRemove = document.querySelector('.btn-remove');
+        let btnToggle = document.querySelector('.btn-toggle');
+        let p =  document.querySelector('p');
 
-        btn.onclick = function(){
+        btnAdd.onclick = function(){
             console.log('按下去了');
             // document.querySelector('p').style.color = 'red';
             // document.querySelector('p').style.backgroundColor = '#aaa';
             // document.querySelector('p').style.padding = '15px';
-            document.querySelector('p').classList.add('active');
+           p.classList.add('active');
+        }
+        btnRemove.onclick = function(){
+           p.classList.remove('active');
+        }
+        btnToggle.onclick = function(){
+           p.classList.toggle('active');
         }
     </script>
 </body>
