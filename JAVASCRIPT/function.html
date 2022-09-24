@@ -8,11 +8,13 @@
 </head>
 <body>
     <script>
+        
+        // 函式表達式 (提升性)
         function test(){
             let a = 23;
             return a*a;
         }
-
+       
         function total(price,tax){
             return price * tax;
         }
@@ -22,6 +24,13 @@
         }
 
         console.log(usToNt(100,32));
+
+        //函式宣告式
+        let go = function(){
+            return 'go';
+        }
+        
+
     </script>
 </body>
 </html>
