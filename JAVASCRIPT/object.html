@@ -22,12 +22,40 @@
             name: '可樂',
             price: '18'
         }
-        console.log(drink);
-        console.log(obj.name);
-        console.log(obj.mail);
-        console.log(obj.gender);
-        console.log(drink.name);
-        console.log(drink.price);
+        // console.log(drink);
+        // console.log(obj.name);
+        // console.log(obj.mail);
+        // console.log(obj.gender);
+        // console.log(drink.name);
+        // console.log(drink.price);
+
+        let drinks = [
+            {
+                id:1,
+                name:'可口可樂',
+                volume: '250ml',
+                price: 18,
+            },
+            {
+                id:2,
+                name:'雪碧',
+                volume: '375ml',
+                price: 24,
+            },
+            {
+                id:3,
+                name:'麥香紅茶',
+                volume: '500ml',
+                price: 30,
+            },
+        ]
+        // console.log(drinks)
+        for(let data of drinks){
+            console.log(data.id);
+            console.log(data.name);
+            console.log(data.volume);
+            console.log(data.price)
+        }
     </script>
 </body>
 </html>
