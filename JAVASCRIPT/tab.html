@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-panel {
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="tab-link">tab 1</a>
+            <a href="#" class="tab-link">tab 2</a>
+            <a href="#" class="tab-link">tab 3</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>Tab 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sed obcaecati aliquam porro voluptatem dolorum repudiandae incidunt eius labore corrupti quibusdam, provident nobis eligendi. Repellendus nemo modi officia soluta voluptate?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>Tab 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>Tab 3</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+        </div>
+    </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(){
+                console.log(this);
+            }
+        }
+    </script>
+</body>
+</html>
