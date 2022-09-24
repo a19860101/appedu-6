@@ -21,9 +21,10 @@
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#" class="tab-link">tab 1</a>
-            <a href="#" class="tab-link">tab 2</a>
-            <a href="#" class="tab-link">tab 3</a>
+            <a href="#tab-1" class="tab-link">tab 1</a>
+            <a href="#tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" class="tab-link">tab 3</a>
+            <a href="#qwerty" class="tab-link">QWERTY</a>
         </div>
         <div class="tab-panel active" id="tab-1">
             <h2>Tab 1</h2>
@@ -52,12 +53,25 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
             </p>
         </div>
+        <div class="tab-panel" id="qwerty">
+            <h2>QWERTY</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+        </div>
     </div>
     <script>
         let tabLinks = document.querySelectorAll('.tab-link');
         for(let tabLink of tabLinks){
             tabLink.onclick = function(){
-                console.log(this);
+                let href = this.getAttribute('href');
+                console.log(href);
+                document.querySelector('.tab-panel.active').classList.remove('active');
+                document.querySelector(href).classList.add('active');
+
             }
         }
     </script>
