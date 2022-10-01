@@ -185,6 +185,18 @@
             dot.dataset.img = i;
             document.querySelector('.slider-dots').append(dot);
         }
+
+        let dots = document.querySelectorAll('.dot');
+        for(let dot of dots){
+            dot.onclick = function(){
+                console.log(this);
+                document.querySelector('.slider-item.active').classList.remove('active');
+                currentIndex = this.dataset.img;
+                imgs[currentIndex].classList.add('active');
+                clearInterval(timer);
+                timer = setInterval(slider,timeout)
+            }
+        }
     </script>
 </body>
 </html>
