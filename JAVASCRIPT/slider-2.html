@@ -74,10 +74,10 @@
             display: flex;
             position: absolute;
             z-index: 9999;
-            background-color: #ccc;
+            /* background-color: #ccc; */
             width: 100%;
             padding: 10px;
-            /* bottom: -50px; */
+            bottom: 50px;
             justify-content: center;
         }
         .dot {
@@ -171,8 +171,11 @@
                 currentIndex = (currentIndex + 1) % total;
             }
 
+            move();
+        }
+        function move(){
             wrapper.style.marginLeft = -(sliderWidth * currentIndex) + 'px';
-            
+
         }
 
         let timer = setInterval(slider,timeout);
@@ -188,11 +191,10 @@
         let dots = document.querySelectorAll('.dot');
         for(let dot of dots){
             dot.onclick = function(){
-                // console.log(this);
-                document.querySelector('.slider-item.active').classList.remove('active');
                 currentIndex = this.dataset.img;
-                imgs[currentIndex].classList.add('active');
-
+                // imgs[currentIndex].classList.add('active');
+                console.log(currentIndex);
+                move()
                 clearInterval(timer);
                 timer = setInterval(slider,timeout)
             }
