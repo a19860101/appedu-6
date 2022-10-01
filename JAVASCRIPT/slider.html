@@ -25,6 +25,7 @@
             position: absolute;
             opacity: 0;
             visibility: hidden;
+            transition: 600ms;
         }
         .slider-item.active {
             opacity: 1;
@@ -82,13 +83,17 @@
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
+        let timeout = 1500;
         let next;
         let prev;
 
-        setInterval(()=>{
+        const slider = ()=>{
             currentIndex = (currentIndex + 1) % total;
-            console.log(currentIndex)
-        },600)
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
+
+        setInterval(slider,timeout)
 
     </script>
 </body>
