@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            font-family: 'Segoe UI';
+            margin: 0;
+            padding: 0;
+        }
         .tab {
             width: 600px;
             margin: auto;
@@ -16,12 +21,31 @@
         .tab-panel.active {
             display: block;
         }
+        .tab-nav {
+            background-color: silver;
+            display: flex;
+            margin-bottom: 50px;
+
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #000;
+            padding: 12px;
+        }
+        .tab-link.active {
+            background-color: #222;
+            color: #fff;
+        }
+        .tab-panel {
+            padding: 12px;
+            background-color: silver;
+        }
     </style>
 </head>
 <body>
     <div class="tab">
         <div class="tab-nav">
-            <a href="#tab-1" data-panel="#tab-1" class="tab-link">tab 1</a>
+            <a href="#tab-1" data-panel="#tab-1" class="tab-link active">tab 1</a>
             <a href="#tab-2" data-panel="#tab-2" class="tab-link">tab 2</a>
             <a href="#tab-3" data-panel="#tab-3" class="tab-link">tab 3</a>
             <a href="#qwerty" data-panel="#qwerty" class="tab-link">QWERTY</a>
@@ -75,11 +99,12 @@
             tabLink.onclick = function(){
                 // let href = this.getAttribute('href');
                 let href = this.dataset.panel;
-                console.log(href);
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(href).classList.add('active');
-
-            }
+                console.log(this);
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active');
+            }   
         }
     </script>
 </body>
