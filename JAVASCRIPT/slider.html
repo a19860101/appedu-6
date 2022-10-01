@@ -17,11 +17,18 @@
             vertical-align: top;
         }
         .slider {
-            width: 1400px;
-            height: 685.7px;
+            width: 1200px;
+            /* height: calc(1200px * 4 / 7); */
+            /* padding-bottom: calc(1200px * 4 / 7); */
+            aspect-ratio: 7 / 4;
             margin: auto;
             position: relative;
         }
+        /* 
+            求比例
+            寬度 * 高的比例 / 寬的比例
+            
+        */
         .slider-item {
             position: absolute;
             opacity: 0;
