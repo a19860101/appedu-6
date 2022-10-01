@@ -17,7 +17,7 @@
             vertical-align: top;
         }
         .slider {
-            width: 1200px;
+            width: 1400px;
             height: 685.7px;
             margin: auto;
             position: relative;
@@ -97,8 +97,16 @@
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
 
-        next.onclick = () => {slider()}
-        prev.onclick = () => {slider('prev')}
+        next.onclick = () => {
+            slider()
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
+        prev.onclick = () => {
+            slider('prev')
+            clearInterval(timer);
+            timer = setInterval(slider,timeout)
+        }
 
         const slider = (direction)=>{
 
@@ -114,7 +122,7 @@
             imgs[currentIndex].classList.add('active');
         }
 
-        setInterval(slider,timeout)
+        let timer = setInterval(slider,timeout);
 
     </script>
 </body>
