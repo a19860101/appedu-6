@@ -18,6 +18,7 @@
         }
         .slider {
             width: 1200px;
+            height: 685.7px;
             margin: auto;
             position: relative;
         }
@@ -30,6 +31,15 @@
         .slider-item.active {
             opacity: 1;
             visibility: visible;
+        }
+        .slider-nav {
+            position: absolute;
+            z-index: 99;
+            background-color: #098;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            bottom: 0;
         }
     </style>
 </head>
@@ -83,12 +93,23 @@
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
-        let timeout = 1500;
-        let next;
-        let prev;
+        let timeout = 5000;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
 
-        const slider = ()=>{
-            currentIndex = (currentIndex + 1) % total;
+        next.onclick = () => {slider()}
+        prev.onclick = () => {slider('prev')}
+
+        const slider = (direction)=>{
+
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
+            console.log(currentIndex);
+            // currentIndex = (currentIndex + 1) % total;
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
