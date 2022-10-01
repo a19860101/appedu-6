@@ -16,6 +16,19 @@
             width: 100%;
             vertical-align: top;
         }
+        .slider {
+            width: 1200px;
+            margin: auto;
+            position: relative;
+        }
+        .slider-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .slider-item {
+            width: 1200px;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -65,5 +78,20 @@
 
         <div class="slider-dots"></div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+        let sliderItem = document.querySelector('.slider-item');
+        let sliderWidth = sliderItem.clientWidth;
+        let wrapperWidth = sliderWidth * total;
+
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+
+        console.log(wrapperWidth);
+    </script>
 </body>
 </html>
