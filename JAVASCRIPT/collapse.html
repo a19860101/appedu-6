@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         aside {
             width: 400px;
             background-color: #ccc;
@@ -14,6 +19,15 @@
         .collapse-panel {
             background-color: #ffb2b2;
             overflow: hidden;
+            height: 0;
+            transition: 500ms;
+            padding-inline:30px;
+            padding-block:0px;
+
+            box-sizing: content-box;
+        }
+        .collapse-panel.active {
+            padding-block:30px;
         }
     </style>
 </head>
@@ -32,7 +46,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam, pariatur vitae amet recusandae culpa nihil totam officia fugiat? Vero quaerat nemo, a perferendis officiis asperiores quod. Rem, vel quis?
             </p>
         </div>
-        <!-- <a href="#" class="collapse-btn" data-panel="#panel-2">Click</a>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Click</a>
         <div class="collapse-panel" id="panel-2">
             <h2>hello collapse 2</h2>
             <p>
@@ -42,7 +56,30 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
             </p>
            
-        </div> -->
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-3">Click</a>
+        <div class="collapse-panel" id="panel-3">
+            <h2>hello collapse 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+           
+        </div>
     </aside>
     <script>
         let collapseBtns = document.querySelectorAll('.collapse-btn');
@@ -50,13 +87,11 @@
             collapseBtn.onclick = function(){
                 let panel = this.dataset.panel;
                 let el = document.querySelector(panel);
-                console.log(el);
+                el.classList.toggle('active');
                 if(el.style.height){
                     el.style.height = null;
-                    console.log(el.style.height)
                 }else{
                     el.style.height = el.scrollHeight + 'px';
-                    console.log(el.style.height);
                 }
             }
         }
