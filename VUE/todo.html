@@ -14,17 +14,24 @@
             <input type="text" v-model="input">
             <input type="submit" value="新增項目" @click.prevent="addTodo()">
         </form>
+        <div>
+            <div v-for="todo of todos">{{todo}}</div>
+        </div>
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
                     input:'',
+                    todos:[
+                        '寫作業','洗衣服'
+                    ]
                 }
             },
             methods:{
                 addTodo(){
-                    console.log(this.input);
+                    this.todos.push(this.input);
+                    this.input = '';
                 }
             }
         }).mount('#app')
