@@ -13,6 +13,7 @@
         }
         .collapse-panel {
             background-color: #ffb2b2;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -31,7 +32,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam, pariatur vitae amet recusandae culpa nihil totam officia fugiat? Vero quaerat nemo, a perferendis officiis asperiores quod. Rem, vel quis?
             </p>
         </div>
-        <a href="#" class="collapse-btn" data-panel="#panel-2">Click</a>
+        <!-- <a href="#" class="collapse-btn" data-panel="#panel-2">Click</a>
         <div class="collapse-panel" id="panel-2">
             <h2>hello collapse 2</h2>
             <p>
@@ -41,14 +42,22 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
             </p>
            
-        </div>
+        </div> -->
     </aside>
     <script>
         let collapseBtns = document.querySelectorAll('.collapse-btn');
         for(let collapseBtn of collapseBtns){
             collapseBtn.onclick = function(){
                 let panel = this.dataset.panel;
-                console.log(panel);
+                let el = document.querySelector(panel);
+                console.log(el);
+                if(el.style.height){
+                    el.style.height = null;
+                    console.log(el.style.height)
+                }else{
+                    el.style.height = el.scrollHeight + 'px';
+                    console.log(el.style.height);
+                }
             }
         }
     </script>
