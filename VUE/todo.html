@@ -15,8 +15,12 @@
             <input type="submit" value="新增項目" @click.prevent="addTodo()">
         </form>
         <div>
-            <div v-for="todo of todos">{{todo}}</div>
+            <div v-for="todo of todos">
+                {{todo.name}}
+                <input type="checkbox" v-model="todo.isCompleted">
+            </div>
         </div>
+        {{todos}}
     </div>
     <script>
         Vue.createApp({
@@ -24,13 +28,26 @@
                 return {
                     input:'',
                     todos:[
-                        '寫作業','洗衣服'
+                        {
+                            id:1,
+                            name: '寫作業',
+                            isCompleted: false,
+                        },
+                        {
+                            id: 2,
+                            name: '洗衣服',
+                            isCompleted: true
+                        }
                     ]
                 }
             },
             methods:{
                 addTodo(){
-                    this.todos.push(this.input);
+                    this.todos.push({
+                        id: this.todos.length + 1,
+                        name: this.input,
+                        isCompleted:false
+                    });
                     this.input = '';
                 }
             }
