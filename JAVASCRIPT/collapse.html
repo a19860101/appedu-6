@@ -116,8 +116,11 @@
                 this.classList.toggle('active');
 
 
-                let panel = this.dataset.panel;
-                let el = document.querySelector(panel);
+                // let panel = this.dataset.panel;
+                // let el = document.querySelector(panel);
+
+                let el = this.nextElementSibling;
+
                 el.classList.toggle('active');
                 if(el.style.height){
                     el.style.height = null;
