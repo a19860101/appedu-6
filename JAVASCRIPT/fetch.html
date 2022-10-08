@@ -7,15 +7,40 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+
+    </div>
     <script>
         let url = 'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
-        // let url = 'https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json';
 
         fetch(url)
-        .then(function(response){return response.json()})
-        .then(function(data){
-            console.log(data);
+        .then(response => response.json())
+        .then(data =>{
+            let datas = data.records;
+            console.log(datas);
+            for(let d of datas){
+                console.log(d);
+                let siteName = document.createElement('div');
+                siteName.classList.add('site-name');
+                siteName.append(d.sitename);
+                
+                let aqi = document.createElement('div');
+                aqi.classList.add('aqi');
+                aqi.append('AQI: '+d.aqi);
+
+                let box = document.createElement('div');
+                box.classList.add('box');
+                box.append(siteName,aqi);
+
+                document.querySelector('.container').append(box);
+            }
         })
+
+        // fetch(url)
+        // .then(function(response){return response.json()})
+        // .then(function(data){
+        //     console.log(data);
+        // })
     </script>
 </body>
 </html>
