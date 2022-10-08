@@ -31,6 +31,9 @@
 
         <div v-show="qty > 10">2庫存充足</div>
         <div v-show="qty == 0">2補貨中</div>
+        <img v-bind:src="cover" alt="">
+        <img :src="cover" alt="">
+        <a :href="link">Yahoo</a>
     </div>
     <script>
         Vue.createApp({
@@ -40,6 +43,8 @@
                     desc: 'lorem ipsum sdf fwef ',
                     number: 123,
                     qty: 0,
+                    cover: 'https://picsum.photos/id/98/800/600',
+                    link: 'https://tw.yahoo.com',
                     products:[
                         {
                             id:1,
