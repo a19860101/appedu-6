@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        aside {
+            width: 400px;
+            background-color: #ccc;
+
+        }
+        .collapse-panel {
+            background-color: #ffb2b2;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">Click</a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>hello collapse</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam, pariatur vitae amet recusandae culpa nihil totam officia fugiat? Vero quaerat nemo, a perferendis officiis asperiores quod. Rem, vel quis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Click</a>
+        <div class="collapse-panel" id="panel-2">
+            <h2>hello collapse 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+           
+        </div>
+    </aside>
+    <script>
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(let collapseBtn of collapseBtns){
+            collapseBtn.onclick = function(){
+                let panel = this.dataset.panel;
+                console.log(panel);
+            }
+        }
+    </script>
+</body>
+</html>
