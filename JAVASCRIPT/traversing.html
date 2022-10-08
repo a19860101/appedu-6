@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>title</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia consequuntur labore aspernatur vero similique minima, exercitationem, amet expedita veniam mollitia ipsa ea aut rerum deserunt esse! Corrupti qui tempora hic!
+        </p>
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quae.
+            </p>
+            <!-- asdf-->
+            <ul>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+                <li class="item">list</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let el = document.querySelector('.content');
+        console.log(el);
+        // 父節點
+        console.log(el.parentNode);
+        // 父元素
+        console.log(el.parentElement);
+
+        //子節點
+        console.log(el.childNodes);
+        //子元素
+        console.log(el.children);
+
+        /* 
+            節點
+            元素節點
+            文字節點(包含換行)
+            註解節點
+        
+        */
+    </script>
+</body>
+</html>
