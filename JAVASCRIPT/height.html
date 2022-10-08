@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            width: 200px;
+            background-color: #ccc;
+            height: 300px;
+
+            padding-block: 30px;
+            border: 10px solid #f00;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae nam fuga ullam veritatis aspernatur ex commodi numquam non nisi consequatur saepe sapiente, reprehenderit itaque nobis iure illo quod modi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae nam fuga ullam veritatis aspernatur ex commodi numquam non nisi consequatur saepe sapiente, reprehenderit itaque nobis iure illo quod modi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quae nam fuga ullam veritatis aspernatur ex commodi numquam non nisi consequatur saepe sapiente, reprehenderit itaque nobis iure illo quod modi.
+        Lorem ipsum dolor sit amet conseetetur adipisicing elit. Rerum quae nam fuga ullam veritatis aspernatur ex commodi numquam non nisi consequatur saepe sapiente, reprehenderit itaque nobis iure illo quod modi.
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+        let c_h = box.clientHeight;/* height + padding */
+        let o_h = box.offsetHeight;/* height + padding + border */
+        let s_h = box.scrollHeight;/* height + padding */
+        console.log('clientHeight: '+c_h);
+        console.log('offsetHeight: '+o_h);
+        console.log('scrollHeight: '+s_h);
+    </script>
+</body>
+</html>
