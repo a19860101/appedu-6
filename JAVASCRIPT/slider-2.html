@@ -190,8 +190,8 @@
 
         let dots = document.querySelectorAll('.dot');
         for(let dot of dots){
-            dot.onclick = function(){
-                currentIndex = this.dataset.img;
+            dot.onclick = (e)=>{
+                currentIndex = e.target.dataset.img;
                 // imgs[currentIndex].classList.add('active');
                 console.log(currentIndex);
                 move()

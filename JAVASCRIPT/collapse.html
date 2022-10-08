@@ -112,14 +112,17 @@
     <script>
         let collapseBtns = document.querySelectorAll('.collapse-btn');
         for(let collapseBtn of collapseBtns){
-            collapseBtn.onclick = function(){
-                this.classList.toggle('active');
+            collapseBtn.onclick = e => {
+                console.log(e.target);
+                // this.classList.toggle('active');
+                e.target.classList.toggle('active');
 
 
                 // let panel = this.dataset.panel;
                 // let el = document.querySelector(panel);
 
-                let el = this.nextElementSibling;
+                // console.log(this);
+                let el = e.target.nextElementSibling;
 
                 el.classList.toggle('active');
                 if(el.style.height){
