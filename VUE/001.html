@@ -24,6 +24,13 @@
                 </h2>
             </div>
         </div>
+        <div v-if="qty > 10">1庫存充足</div>
+        <div v-else-if="qty > 0">即將完售</div>
+        <div v-else>1補貨中</div>
+
+
+        <div v-show="qty > 10">2庫存充足</div>
+        <div v-show="qty == 0">2補貨中</div>
     </div>
     <script>
         Vue.createApp({
@@ -32,6 +39,7 @@
                     title: 'hello Vue!',
                     desc: 'lorem ipsum sdf fwef ',
                     number: 123,
+                    qty: 0,
                     products:[
                         {
                             id:1,
