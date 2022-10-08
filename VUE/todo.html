@@ -14,16 +14,19 @@
             <input type="text" v-model="input">
             <input type="submit" value="新增項目" @click.prevent="addTodo()">
         </form>
+
         <h2 v-show="completedTodo.length != 0">已完成</h2>
         <div v-for="todo of completedTodo" :key="todo.id">
             {{todo.name}}
             <input type="checkbox" v-model="todo.isCompleted">
         </div>
+
         <h2 v-show="unCompletedTodo.length != 0">未完成</h2>
         <div v-for="todo of unCompletedTodo" :key="todo.id">
             {{todo.name}}
             <input type="checkbox" v-model="todo.isCompleted">
         </div>
+        
     </div>
     <script>
         Vue.createApp({
