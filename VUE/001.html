@@ -17,6 +17,13 @@
         <div>
             {{number}}
         </div>
+        <div>
+            <div v-for="data of products">
+                <h2>
+                    {{data.name}} : {{data.price}}
+                </h2>
+            </div>
+        </div>
     </div>
     <script>
         Vue.createApp({
@@ -24,7 +31,18 @@
                 return {
                     title: 'hello Vue!',
                     desc: 'lorem ipsum sdf fwef ',
-                    number: 123
+                    number: 123,
+                    products:[
+                        {
+                            id:1,
+                            name:'apple',
+                            price: 20
+                        },{
+                            id:2,
+                            name:'orange',
+                            price:33
+                        }
+                    ]
                 }
             },
         }).mount('#app');
