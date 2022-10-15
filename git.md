@@ -59,6 +59,15 @@ git add .
 git commit -m "message"
 ```
 > -m 指的是message。在commit的時候一定要有-m，否則無法commit
+
+## 連線
+```bash
+git remote origin master https://github.com/xxx/xxx.git
+#連線到遠端並使用名稱origin
+
+git push origin master -u
+#推送到origin連線的master分支 並且使用主串流
+```
 ## 紀錄
 Git 紀錄
 ```
