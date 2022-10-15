@@ -35,6 +35,7 @@
                     {{data.weather[0].description}}
                 </div>
             </template>
+            {{getTS}}
         </div>
     </div>
     <script>
@@ -57,7 +58,24 @@
                         this.datas = data.list;
                     })
                 }
+            },
+            computed:{
+                getTS(){
+                    return this.datas.map(d =>{
+                        let myDate = new Date(d.dt * 1000);
+                        let year = myDate.getFullYear();
+                        let month = myDate.getMonth()+1;
+                        let date = myDate.getDate();
+                        let day = myDate.getDay();
+                        let hours = myDate.getHours();
+                        let minutes = myDate.getMinutes();
+
+                        let output = `${year}年${month}月${date}日星期${day} ${hours}:${minutes}0`;
+                        return output;
+                    })
+                }
             }
+
 
         }).mount('#app')
     </script>
