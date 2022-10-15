@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <select name="" id="" v-model="city" @change="getWeather()">
+            <option value="">請選擇</option>
+            <option value="taipei">台北</option>
+            <option value="tokyo">東京</option>
+            <option value="bangkok">曼谷</option>
+            <option value="chicago">芝加哥</option>
+        </select>
+        <div v-if="city !='' ">
+            <div>
+                目前氣溫:{{data.main.temp}}
+            </div>
+            <div>
+                體感溫度:{{data.main.feels_like}}
+            </div>
+            <div>
+                濕度:{{data.main.humidity}}%
+            </div>
+            <div>
+                {{data.weather[0].description}}
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    datas:[],
+                    city:''
+                }
+            },
+            methods:{
+                getWeather(){
+                    // console.log(this.city);
+                    let city = this.city;
+                    let url = 'https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&lang=zh_TW&appid=b1ecbccd638b763d489602917ba47cc3';
+                    fetch(url)
+                    .then(res=>res.json())
+                    .then(data=>{
+                        console.log(data.list)
+                        this.datas = data.list;
+                    })
+                }
+            }
+
+        }).mount('#app')
+    </script>
+</body>
+</html>
