@@ -18,24 +18,29 @@
             <option value="chicago">芝加哥</option>
         </select>
         <div v-if="city !='' ">
-            <div>
-                目前氣溫:{{data.main.temp}}
-            </div>
-            <div>
-                體感溫度:{{data.main.feels_like}}
-            </div>
-            <div>
-                濕度:{{data.main.humidity}}%
-            </div>
-            <div>
-                {{data.weather[0].description}}
-            </div>
+            <template v-for="data of datas">
+                <div>
+                    {{data.dt_txt}}
+                </div>
+                <div>
+                    目前氣溫:{{data.main.temp}}
+                </div>
+                <div>
+                    體感溫度:{{data.main.feels_like}}
+                </div>
+                <div>
+                    濕度:{{data.main.humidity}}%
+                </div>
+                <div>
+                    {{data.weather[0].description}}
+                </div>
+            </template>
         </div>
     </div>
     <script>
         Vue.createApp({
             data(){
-                return {
+                return { 
                     datas:[],
                     city:''
                 }
