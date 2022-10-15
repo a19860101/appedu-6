@@ -22,6 +22,7 @@
                 <div>
                     {{getTS[i]}}
                 </div>
+                <img :src="`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`" alt="">
                 <div>
                     目前氣溫:{{data.main.temp}}
                 </div>
