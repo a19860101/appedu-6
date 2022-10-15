@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <select name="" id="" v-model="city" @change="getWeather()">
+            <option value="">請選擇</option>
+            <option value="taipei">台北</option>
+            <option value="tokyo">東京</option>
+            <option value="bangkok">曼谷</option>
+            <option value="chicago">芝加哥</option>
+        </select>
+        <div v-if="city !='' ">
+            <template v-for="(data,i) of datas">
+                <div>
+                    {{getTS[i]}}
+                </div>
+                <img :src="`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`" alt="">
+                <div>
+                    目前氣溫:{{data.main.temp}}
+                </div>
+                <div>
+                    體感溫度:{{data.main.feels_like}}
+                </div>
+                <div>
+                    濕度:{{data.main.humidity}}%
+                </div>
+                <div>
+                    {{data.weather[0].description}}
+                </div>
+            </template>
+            {{getTS}}
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                datas:[],
+                city:''
+            },
+            methods:{
+                getWeather(){
+                    // console.log(this.city);
+                    let city = this.city;
+                    let url = 'https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=metric&lang=zh_TW&appid=b1ecbccd638b763d489602917ba47cc3';
+                    fetch(url)
+                    .then(res=>res.json())
+                    .then(data=>{
+                        console.log(data.list)
+                        this.datas = data.list;
+                    })
+                }
+            },
+            computed:{
+                getTS(){
+                    return this.datas.map(d =>{
+                        let myDate = new Date(d.dt * 1000);
+                        let year = myDate.getFullYear();
+                        let month = myDate.getMonth()+1;
+                        let date = myDate.getDate();
+                        let day = myDate.getDay();
+                        let hours = myDate.getHours();
+                        let minutes = myDate.getMinutes();
+                        let day_tw = ['日','一','二','三','四','五','六'];
+                        let day_us = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+                        let output = `${year}年${month}月${date}日星期${day_tw[day]} ${hours}:${minutes}0`;
+                        return output;
+                    })
+                }
+            }
+
+
+        })
+    </script>
+</body>
+</html>
