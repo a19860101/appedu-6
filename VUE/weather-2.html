@@ -18,9 +18,9 @@
             <option value="chicago">芝加哥</option>
         </select>
         <div v-if="city !='' ">
-            <template v-for="data of datas">
+            <template v-for="(data,i) of datas">
                 <div>
-                    {{data.dt_txt}}
+                    {{getTS[i]}}
                 </div>
                 <div>
                     目前氣溫:{{data.main.temp}}
