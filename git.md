@@ -162,9 +162,10 @@ git reset HEAD^
 ```bash
 git reset --hard 版本號
 ```
-## 下載
+## 下載更新
 ```bash
 git pull origin master
+#origin master可省略
 
 ```
 ## 取得儲存庫
