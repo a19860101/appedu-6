@@ -142,8 +142,9 @@ git rm --cached myTxt.txt
 ```bash
 git rm --cached -r .
 ```
-## 還原
-在還沒追蹤之前，將內容還原成上一次修改的狀態
+## 回復
+
+在還沒追蹤(add)之前，將修改內容移除
 ```bash
 git checkout index.html
 ```
@@ -161,6 +162,7 @@ git reset HEAD^
 ## 回到特定版本
 ```bash
 git reset --hard 版本號
+# --hard 硬回復, --soft 軟回復
 ```
 ## 下載更新
 ```bash
