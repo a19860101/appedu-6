@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="container-xl"></div>
+    <div class="container">
+        <h1>title</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia consequuntur labore aspernatur vero similique minima, exercitationem, amet expedita veniam mollitia ipsa ea aut rerum deserunt esse! Corrupti qui tempora hic!
+        </p>
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quae.
+            </p>
+            <!-- asdf-->
+            <ul>
+                <li class="item">list 1</li>
+                <li class="item">list 2</li>
+                <li class="item">list 3</li>
+                <li class="item">list 4</li>
+                <li class="item">list 5</li>
+                <li class="item">list 6</li>
+            </ul>
+            <ul>
+                <li class="item">list A</li>
+                <li class="item">list B</li>
+                <li class="item">list C</li>
+                <li class="item">list D</li>
+                <li class="item">list E</li>
+                <li class="item">list F</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            // 父
+            
+            // 父層
+            // console.log($('h2').parent());
+
+            // 直系長輩層(可指定)
+            // console.log($('h2').parents());
+            // console.log($('h2').parents('.container'));
+
+            // 直系長輩層(需指定)
+            console.log($('li').closest('.container'))
+
+
+            //子
+
+            //子層(可指定)
+            // console.log($('.content').children());
+            // console.log($('.content').children('ul'));
+
+            // 後代(需指定)
+            // console.log($('.content').find('.item'))
+
+            // 同
+
+            // console.log($('ul').next());
+            // console.log($('ul').prev());
+            
+            //同輩且相同的元素
+            // console.log($('li').eq(7));
+
+        })
+    </script>
+</body>
+</html>
