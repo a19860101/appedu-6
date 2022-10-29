@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            font-family: 'Segoe UI';
+            margin: 0;
+            padding: 0;
+        }
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-panel {
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        .tab-nav {
+            background-color: silver;
+            display: flex;
+            /* margin-bottom: 50px; */
+
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #000;
+            padding: 12px;
+        }
+        .tab-link.active {
+            background-color: #222;
+            color: #fff;
+        }
+        .tab-panel {
+            padding: 12px;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-1" data-panel="#tab-1" class="tab-link active">tab 1</a>
+            <a href="#tab-2" data-panel="#tab-2" class="tab-link">tab 2</a>
+            <a href="#tab-3" data-panel="#tab-3" class="tab-link">tab 3</a>
+            <a href="#qwerty" data-panel="#qwerty" class="tab-link">QWERTY</a>
+        </div>
+        <!-- <div class="tab-nav">
+            <a href="#" data-panel="#tab-1" class="tab-link">tab 1</a>
+            <a href="#" data-panel="#tab-2" class="tab-link">tab 2</a>
+            <a href="#" data-panel="#tab-3" class="tab-link">tab 3</a>
+            <a href="#" data-panel="#qwerty" class="tab-link">QWERTY</a>
+        </div> -->
+        <div class="tab-panel active" id="tab-1">
+            <h2>Tab 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sed obcaecati aliquam porro voluptatem dolorum repudiandae incidunt eius labore corrupti quibusdam, provident nobis eligendi. Repellendus nemo modi officia soluta voluptate?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>Tab 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia ipsam fuga maiores ex doloribus vel quod ipsum, aliquam molestias doloremque eaque ea commodi soluta error accusantium, nostrum harum optio?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>Tab 3</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+        </div>
+        <div class="tab-panel" id="qwerty">
+            <h2>QWERTY</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure autem totam nisi fugiat aspernatur. Repellendus molestias necessitatibus doloremque vel corporis facere, ipsum nemo reiciendis animi amet ea, facilis totam voluptas alias recusandae provident deserunt sed atque accusamus et quae tenetur! Quo corporis illum in accusamus esse laboriosam libero maxime iste eos sit doloremque odio, temporibus deleniti molestiae quis quasi, a commodi. Id non vero aliquid quasi iusto sed hic quae expedita laborum at, unde ut tempora veniam facilis repellat similique aperiam labore enim magni aut sapiente assumenda! Veniam nisi facilis, eius dolorem ab fuga cum molestias illum corporis, optio voluptatum ea itaque nulla saepe! Asperiores voluptate, aspernatur eius autem odio enim ea impedit. Tempora excepturi quidem sequi, nulla quibusdam eius laborum corrupti ipsa dolorum quaerat, saepe unde harum voluptas possimus asperiores placeat quis non veniam. Cupiditate inventore dolor eum quisquam! Eum natus perspiciatis facere? Tempore accusamus adipisci alias deserunt quam, corrupti quo facilis, sunt fugiat molestiae fuga voluptatum eum, debitis voluptas ipsum quos nulla animi saepe nihil ab natus voluptatem nemo? Consectetur, autem et esse nihil iusto doloremque possimus placeat, quidem porro aliquam odit maxime eius optio dicta omnis. Vero possimus, est repellat autem ipsam officia provident quibusdam dolore veniam!
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, nihil suscipit. Eius modi nesciunt voluptatem illo reiciendis vel id officiis esse maiores molestias saepe ea architecto eaque, ad, aliquam ratione.
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.tab-link').click(function(){
+                $('.tab-link.active').removeClass('active');
+                $(this).addClass('active');
+                // let href = $(this).attr('href');
+                let href = $(this).data('panel');
+                $('.tab-panel.active').removeClass('active');
+                $(href).addClass('active');
+            })
+
+        })
+    </script>
+</body>
+</html>
