@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        aside {
+            width: 400px;
+            background-color: #ccc;
+
+        }
+        .collapse-btn {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+            border-bottom: #777 solid 1px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+        .collapse-panel {
+            background-color: #ffb2b2;
+            padding:30px;
+            display: none;
+
+        }
+
+        .collapse-btn .arrow {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-left: 3px solid #000;
+            border-top: 3px solid #000;
+            transform: rotate(-135deg);
+            position: relative;
+            top: 0;
+            transition: 500ms;
+        }
+        .collapse-btn.active .arrow{
+            transform: rotate(45deg);
+            top: 5px
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <a href="#" class="collapse-btn" data-panel="#panel-1">
+            Click
+            <span class="arrow"></span>
+        </a>
+        <div class="collapse-panel" id="panel-1">
+            <h2>hello collapse</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam, pariatur vitae amet recusandae culpa nihil totam officia fugiat? Vero quaerat nemo, a perferendis officiis asperiores quod. Rem, vel quis?
+            </p>
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-2">Click<span class="arrow"></span></a>
+        <div class="collapse-panel" id="panel-2">
+            <h2>hello collapse 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+           
+        </div>
+        <a href="#" class="collapse-btn" data-panel="#panel-3">Click<span class="arrow"></span></a>
+        <div class="collapse-panel" id="panel-3">
+            <h2>hello collapse 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate veritatis aliquid illo? Rem suscipit totam autem et. Exercitationem nulla sit, consectetur quod totam illo labore impedit praesentium quia alias vel!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga deserunt molestias magni rerum error recusandae exercitationem minus tenetur corporis sunt tempora officia itaque accusantium, fugit saepe ab accusamus. Placeat.
+            </p>
+           
+        </div>
+    </aside>
+    <script>
+        $(function(){
+            $('.collapse-btn').click(function(){
+                console.log('test');
+                $(this).next().slideToggle();
+                // $(this).next().slideUp();
+                // $(this).next().slideDown();
+                /*
+                    toggle(),show(),hide()
+                    slideToggle(), slideDown(), slideUp()
+                    fadeToggle(), fadeIn(),fadeOut()
+                
+                */
+            })
+        })
+    </script>
+</body>
+</html>
