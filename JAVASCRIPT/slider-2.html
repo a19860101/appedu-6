@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slider-2</title>
     <style>
         * {
             box-sizing: border-box;
@@ -191,7 +191,7 @@
         let dots = document.querySelectorAll('.dot');
         for(let dot of dots){
             dot.onclick = (e)=>{
-                currentIndex = e.target.dataset.img;
+                currentIndex = Number(e.target.dataset.img);
                 // imgs[currentIndex].classList.add('active');
                 console.log(currentIndex);
                 move()
