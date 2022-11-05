@@ -21,7 +21,7 @@
             color: #000;
         }
         .product-slider {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
         .product-slider-item {
@@ -100,10 +100,26 @@
                 infinite: true
             });
             $('.product-slider').slick({
-                slidesToShow:5,
+                slidesToShow:6,
                 slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: '100px'
+                // centerMode: true,
+                // centerPadding: '100px',
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings:{
+                            slidesToShow:4,
+
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings:{
+                            slidesToShow:2,
+
+                        }
+                    },
+                ]
             })
         })
     </script>
