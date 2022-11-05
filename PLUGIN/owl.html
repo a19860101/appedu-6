@@ -24,9 +24,9 @@
             width: 1200px;
             margin: auto;
         }
-        .product-slider-item {
+        /* .product-slider-item {
             margin-inline: 10px;
-        }
+        } */
         .product-slider-item img {
             width: 100%;
         }
@@ -49,6 +49,9 @@
         </div>
         <div class="slider-item">
             <img src="https://picsum.photos/id/47/1200/600" alt="">
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/id/145/1200/600" alt="">
         </div>
     </div>
     <div class="product-slider owl-carousel owl-theme">
@@ -91,8 +94,25 @@
     </div>
     <script>
         $(function(){
-            $('.slider').owlCarousel();
-            $('.product-slider').owlCarousel();
+            $('.slider').owlCarousel({
+                items:1,
+                autoplay: true,
+                loop: true,
+                nav: true,
+                autoplayTimeout: 8000,
+                autoplaySpeed: 2000,
+                dotsSpeed:2000,
+                navSpeed:2000
+
+            });
+            $('.product-slider').owlCarousel({
+                items: 4,
+                margin: 10,
+                center: true,
+                loop: true,
+                autoplay:true,
+                autoplayTimeout:1000
+            });
         })
     </script>
 </body>
