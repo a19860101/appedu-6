@@ -15,14 +15,14 @@
             background-color: #098;
         } */
         .slider {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
         .slick-next:before, .slick-prev:before {
             color: #000;
         }
         .product-slider {
-            width: 1200px;
+            max-width: 1200px;
             margin: auto;
         }
         /* .product-slider-item {
@@ -115,12 +115,23 @@
 
             });
             $('.product-slider').owlCarousel({
-                items: 4,
                 margin: 10,
                 center: true,
                 loop: true,
                 autoplay:true,
-                autoplayTimeout:1000
+                autoplayTimeout:1000,
+                responsive:{
+                    0: {
+                        items:2,
+                        center: false
+                    },
+                    768: {
+                        items: 4,
+                    },
+                    1200: {
+                        items: 6
+                    }
+                }
             });
         })
     </script>
