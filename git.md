@@ -62,7 +62,7 @@ git commit -m "message"
 
 ## 連線
 ```bash
-git remote add origin master https://github.com/xxx/xxx.git
+git remote add origin https://github.com/xxx/xxx.git
 #連線到遠端並使用名稱origin
 
 git remote rm origin
